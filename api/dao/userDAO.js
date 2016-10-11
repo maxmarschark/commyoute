@@ -3,6 +3,7 @@ const sql = require('../sqlprovider').users;
 
 class UserDAO {
   static all() {
-    return db.map(sql.all, [])
+    return db.map(sql.all, [], (row) => new User(row));
   }
+
 }

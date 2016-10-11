@@ -8,8 +8,9 @@ class TrainsController {
 }
 
 static create(req, res) {
-  const chirpData = {
-    type: req.,
+  const trainData = {
+    type: req.body,
+    console.log(req.body),
     name: req.,
     overall: req.,
     delay: req.,

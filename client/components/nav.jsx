@@ -7,9 +7,14 @@ export default class Nav extends Component {
   }
   render() {
     return (
-      <div id="navBar">
-        <Link to="/" id="homeButton">Home</Link>
-        <Link to="/register" id="registerButton">Register</Link>
+      <div>
+        <div id="navBar">
+          <Link to="/" id="homeButton">Home</Link>
+          <Link to="/register" id="registerButton">Register</Link>
+        </div>
+        <div id="body">
+          {this.props.children}
+        </div>
       </div>
     );
   }

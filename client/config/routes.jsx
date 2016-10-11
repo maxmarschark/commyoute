@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
-import Home from '../components/home.jsx';
 import Nav from '../components/nav.jsx';
+import Home from '../components/home.jsx';
 import Register from '../components/register.jsx';
 
 const Routes = () => {
@@ -9,7 +9,7 @@ const Routes = () => {
     <Router history={hashHistory}>
       <Route path="/" component={Nav}>
         <IndexRoute component={Home} />
-        <Route path="/register" component={Register} />
+        <Route path="register" component={Register} />
       </Route>
     </Router>
   );

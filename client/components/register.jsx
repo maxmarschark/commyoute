@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Register extends Component {
+class Register extends Component {
   constructor() {
     super();
   }
@@ -12,3 +12,5 @@ export default class Register extends Component {
     );
   }
 }
+
+export default Register;

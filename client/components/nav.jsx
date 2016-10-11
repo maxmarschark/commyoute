@@ -5,7 +5,7 @@ const propTypes = {
   children: React.PropTypes.element.isRequired,
 };
 
-export default class Nav extends Component {
+class Nav extends Component {
   constructor() {
     super();
   }
@@ -23,5 +23,7 @@ export default class Nav extends Component {
     );
   }
 }
+
+export default Nav;
 
 Nav.propTypes = propTypes;

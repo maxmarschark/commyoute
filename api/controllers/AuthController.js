@@ -33,7 +33,7 @@ class AuthController {
                res.cookie('token', token);
                res.status(200).json(user);
              })
-             .catch((err) => res.status(500).json(err);
+             .catch((err) => res.status(500).json(err));
     } else {
       req.status(400).end();
     }
@@ -44,3 +44,5 @@ class AuthController {
     res.status(204).end();
   }
 }
+
+module.exports = AuthController;

@@ -21,5 +21,21 @@ class AuthController {
              res.status(401).end();
            });
   }
-  
+  static signUp(req, res) {
+    const email = req.body.email;
+    let password = req.body.password;
+    if (email.length > 0 && password.lenght > 0) {
+      password = bcrypt.hashSync(password, 10);
+      UserDAO.create({ email, password })
+             .then((user) => {
+               req.session.currentUser = user;
+               const token = createToken(user);
+               res.cookie('token', token);
+               res.status(200).json(user);
+             })
+             .catch((err) => res.status(500).json(err);
+    } else {
+      req.status(400).end();
+    }
+  }
 }

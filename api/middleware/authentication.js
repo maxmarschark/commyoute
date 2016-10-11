@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const authentication = (req, res, next) => {
   const { token } = req.cookies;
 
-  const allowedRoutes = ['/login', '/register', '/signout'];
+  const allowedRoutes = ['/login', '/signup', '/signout'];
 
   if (allowedRoutes.includes(req.path)) { return next(); }
   if (token && req.session.currentUser) {

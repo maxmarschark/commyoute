@@ -11,8 +11,8 @@ class UserDAO {
     return db.one(sql.find, [key, value])
              .then((row) => new User(row));
   }
-  static create({ email, password }) {
-    return db.one(sql.create, [email, password])
+  static create({ firstname, lastname, email, password }) {
+    return db.one(sql.create, [firstname, lastname, email, password])
              .then((row) => new User(row));
   }
   static delete(id) {

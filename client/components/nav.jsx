@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
+const propTypes = {
+  children: React.PropTypes.element.isRequired,
+};
+
 export default class Nav extends Component {
   constructor() {
     super();
@@ -19,3 +23,5 @@ export default class Nav extends Component {
     );
   }
 }
+
+Nav.propTypes = propTypes;

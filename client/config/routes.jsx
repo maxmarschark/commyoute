@@ -1,8 +1,8 @@
 import React from 'react';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
-import Nav from '../components/nav.jsx';
-import Home from '../components/home.jsx';
-import Register from '../components/register.jsx';
+import Nav from '../components/Nav.jsx';
+import Home from '../components/Home.jsx';
+import Register from '../components/Register.jsx';
 
 const Routes = () => {
   return (

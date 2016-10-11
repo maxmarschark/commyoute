@@ -1,0 +1,54 @@
+{
+  "name": "commyoute",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxmarschark/commyoute.git"
+  },
+  "author": "sam, wes, john, max",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxmarschark/commyoute/issues"
+  },
+  "homepage": "https://github.com/maxmarschark/commyoute#readme",
+  "dependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^2.0.0",
+    "eslint": "^3.7.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.0.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.3.0",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.1.9",
+    "morgan": "^1.7.0",
+    "pg-promise": "^5.3.4",
+    "react": "^15.3.2",
+    "react-cookie": "^0.4.8",
+    "react-dom": "^15.3.2",
+    "superagent": "^2.3.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-hot-middleware": "^2.12.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-plugin-import": "^1.15.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0"
+  }
+}

@@ -38,4 +38,9 @@ class AuthController {
       req.status(400).end();
     }
   }
+  static signOut(req, res) {
+    req.session.currentUser = null;
+    res.clearCookie('token');
+    res.status(204).end();
+  }
 }

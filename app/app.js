@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const session = require('express-session');
-const authentication = require('../api/middleware/authentication.js');
-const authRouter = require('../api/routes/authRouter.js');
+const authentication = require('../api/middleware/authentication');
+const AuthRouter = require('../api/routes/AuthRouter');
 
 const app = express();
 
@@ -22,8 +22,8 @@ app.use(session({
 app.use(morgan('dev'));
 
 app.use('/test', authentication);
-app.use('/test', authRouter);
-app.use('/test/users', userRouter);
-app.use('/test/trains', trainsRouter);
+app.use('/test', AuthRouter);
+app.use('/test/users', UserRouter);
+app.use('/test/trains', TrainsRouter);
 
 module.exports = app;

@@ -1,0 +1,28 @@
+{
+  "name": "commyoute",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --inline --hot --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxmarschark/commyoute.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxmarschark/commyoute/issues"
+  },
+  "homepage": "https://github.com/maxmarschark/commyoute#readme",
+  "devDependencies": {
+    "eslint": "^3.7.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "webpack": "^1.13.2"
+  }
+}

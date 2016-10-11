@@ -10,5 +10,9 @@ INSERT INTO users(firstname, lastname, email, password) VALUES ('Sam', 'Peterson
 INSERT INTO users(firstname, lastname, email, password) VALUES ('John', 'Castrillon', 'john@john.com', 'password');
 
 -- 7 train
-INSERT INTO trans(type, name, overall, delay, crowded, smelly, post_time, user_id) VALUES ('Train', '7', 2, true, true, false, )
+INSERT INTO trans(type, name, overall, delay, crowded, smelly, u_id) VALUES ('Train', '7', 2, true, true, false, 1);
+INSERT INTO trans(type, name, overall, delay, crowded, smelly, u_id) VALUES ('Train', '7', 4, true, true, false, 2);
+INSERT INTO trans(type, name, overall, delay, crowded, smelly, u_id) VALUES ('Train', '7', 5, true, true, false, 2);
+INSERT INTO trans(type, name, overall, delay, crowded, smelly, u_id) VALUES ('Train', '7', 1, true, true, false, 3);
+
 

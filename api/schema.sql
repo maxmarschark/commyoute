@@ -9,6 +9,7 @@ CREATE TABLE users (
   password VARCHAR(10)
 );
 
+
 CREATE TABLE trans (
   t_id SERIAL PRIMARY KEY,
   type VARCHAR(255),
@@ -17,6 +18,6 @@ CREATE TABLE trans (
   delay BOOLEAN,
   crowded BOOLEAN,
   smelly BOOLEAN,
-  review_Date datetime NOT NULL DEFAULT GETDATE(),
-  u_id INTEGER FOREIGN KEY REFERENCES users(u_Id)
+  review_Date TIMESTAMP NOT NULL DEFAULT NOW(),
+  u_id INTEGER REFERENCES users(u_id)
 );

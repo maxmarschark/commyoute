@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App.jsx';
+import Routes from './config/routes.jsx';
 
-ReactDOM.render(<App message="test" />, document.querySelector("#root"));
+ReactDOM.render(<Routes />, document.querySelector('#root'));

@@ -7,17 +7,17 @@ function sql(file) {
 }
 
 const sqlProvider = {
-  users {
+  users: {
     all: sql('./user/all.sql'),
     create: sql('./user/create.sql'),
     delete: sql('./user/delete.sql'),
-    findUser: sql('./user/find.sql')
-  }
+    findUser: sql('./user/find.sql'),
+  },
 
-  trans {
+  trans: {
     all: sql('./trans/all.sql'),
-    create: sql('./trans/create.sql')
-  }
+    create: sql('./trans/create.sql'),
+  },
 };
 
-module.export = sqlProvider;
+module.exports = sqlProvider;

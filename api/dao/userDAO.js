@@ -19,4 +19,4 @@ class UserDAO {
     return db.none(sql.delete, [id]);
   }
 }
-}
+ module.exports = UserDAO;

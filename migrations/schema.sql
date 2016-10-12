@@ -15,9 +15,9 @@ CREATE TABLE trans (
   type VARCHAR(255),
   name VARCHAR(255),
   overall INTEGER,
-  delay BOOLEAN,
-  crowded BOOLEAN,
-  smelly BOOLEAN,
+  delay VARCHAR(1),
+  crowded VARCHAR(1),
+  smelly VARCHAR(1),
   review_date TIMESTAMP NOT NULL DEFAULT NOW(),
   u_id INTEGER REFERENCES users(u_id)
 );

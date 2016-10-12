@@ -4,8 +4,9 @@ const Train = require('../models/trainModel');
 
 class TransDAO {
   static getTrainInfo(id) {
-    return db.one(sql.overallAvg, [id]).then(avg =>
-      new Train({ name: id, ovrAvg: avg })
+    return db.one(sql.infoAvgs, [id]).then(res =>
+      // new Train({ name: id, ovrAvg: avg.avg })
+      console.log(`Response: ${res.delay}, for train: ${id}`)
     );
   }
   // static findUser(keyValue) {

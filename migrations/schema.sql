@@ -14,9 +14,9 @@ CREATE TABLE trans (
   type VARCHAR(255),
   name VARCHAR(255),
   overall INTEGER,
-  delay VARCHAR(1),
-  crowded VARCHAR(1),
-  smelly VARCHAR(1),
+  delay INTEGER,
+  crowded INTEGER,
+  smelly INTEGER,
   review_date TIMESTAMP NOT NULL DEFAULT NOW(),
-  u_id INTEGER FOREIGN KEY REFERENCES users(u_id)
+  u_id INTEGER REFERENCES users(u_id)
 );

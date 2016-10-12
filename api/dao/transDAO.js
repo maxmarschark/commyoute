@@ -1,10 +1,27 @@
 const db = require('../db');
 const sql = require('../sqlprovider').trans;
+const Train = require('../models/trainModel');
 
 class TransDAO {
   static getTrainInfo(trainName) {
-    const columns = [overall, smelly, delay, crowded]
-    for 
+    let ovrAvg = 0;
+    let smellAvg = 0;
+    let crowdAvg = 0;
+    let delayAvg = 0;
+    db.one(sql.crowdedAvg, [trainName]).then((avg) => {
+      crowdAvg = avg;
+    });
+    db.one(sql.delayAvg, [trainName]).then((avg) => {
+      delayAvg = avg;
+    });
+    db.one(sql.smellAvg, [trainName]).then((avg) => {
+      smellAvg = avg;
+    });
+    db.one(sql.overallAvg, [trainName]).then((avg) => {
+      ovrAvg = avg;
+    }).then(() => {
+      return new Train({ name: trainName, ovrAvg, smellAvg, crowdAvg, delayAvg });
+    });
   }
   // static findUser(keyValue) {
   //   const key = Object.keys(keyValue)[0];

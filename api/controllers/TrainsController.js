@@ -8,7 +8,9 @@ class TrainsController {
     });
   }
   static getTrainInfo(req, res) {
-    TransDAO.
+    TransDAO.getTrainInfo(req.body.name).then((train) => {
+      res.status(200).json(train);
+    });
   }
 }
 

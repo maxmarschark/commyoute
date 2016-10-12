@@ -12,9 +12,11 @@ const sqlProvider = {
     findUser: sql('./user/find.sql'),
     changeName: sql('./user/change.sql'),
   },
-
   trans: {
-    all: sql('./trans/all.sql'),
+    crowdedAvg: sql('./trans/trainInfo/crowdedAvg.sql'),
+    delayAvg: sql('./trans/trainInfo/crowdedAvg.sql'),
+    overallAvg: sql('./trans/trainInfo/crowdedAvg.sql'),
+    smellAvg: sql('./trans/trainInfo/crowdedAvg.sql'),
     create: sql('./trans/create.sql'),
   },
 };

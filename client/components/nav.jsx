@@ -8,12 +8,13 @@ const propTypes = {
 class Nav extends Component {
   constructor() {
     super();
+    this.showResponsive = this.showResponsive.bind(this);
   }
 
   showResponsive() {
     let nav = document.getElementById("topnav");
     if (nav.className === "nav") {
-        nav.className += " responsive";
+        nav.className += "responsive";
     } else {
         nav.className = "nav";
     }
@@ -21,11 +22,11 @@ class Nav extends Component {
   render() {
     return (
       <div>
-        <ul class="nav" id="topnav">
-          <li><Link class="link" to="/" id="homeButton">Home</Link></li>
-          <li><Link class="link" to="/register" id="registerButton">Register</Link></li>
-          <li class="icon">
-            <a href="javascript:void(0);" style="font-size:15px;" onclick="showResponsive()">☰</a>
+        <ul className="nav" id="topnav">
+          <li><Link className="link" to="/" id="homeButton">Home</Link></li>
+          <li><Link className="link" to="/register" id="registerButton">Register</Link></li>
+          <li className="icon">
+            <a href="javascript:void(0);" className="font" onClick={this.showResponsive}>☰</a>
           </li>
         </ul>
         <div id="body">

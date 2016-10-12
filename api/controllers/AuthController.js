@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 class AuthController {
   static login(req, res) {
     const { email, password } = req.body;
-    UserDAO.findBy({ email })
+    UserDAO.findUser({ email })
            .then((user) => {
              if (!bcrypt.compareSync(password, user.password)) {
                res.status(401).end();
@@ -24,7 +24,7 @@ class AuthController {
   static signUp(req, res) {
     const email = req.body.email;
     let password = req.body.password;
-    if (email.length > 0 && password.lenght > 0) {
+    if (email.length > 0 && password.length > 0) {
       password = bcrypt.hashSync(password, 10);
       UserDAO.create({ email, password })
              .then((user) => {

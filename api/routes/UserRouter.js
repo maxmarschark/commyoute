@@ -3,7 +3,7 @@ const UserController = require('../controllers/UserController');
 
 const router = express.Router();
 
-router.get('/', UserController.getAll);
 router.get('/:id', UserController.getOne);
+router.patch('/:id', UserController.changeName);
 
 module.exports = router;

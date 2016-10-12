@@ -14,7 +14,9 @@ ul.nav {
 ul.nav li {
   float: left;
 }
-
+a.font {
+  font-size: 0.938em;
+}
 .link {
   display: inline-block;
   color: #ffffff;

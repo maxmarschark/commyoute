@@ -1,21 +1,22 @@
-const trainsDAO = require '../dao/UserDAO';
+const trainsDAO = require('../dao/TransDAO');
 
 class TrainsController {
-  statis getAllOfCurrentUser(req, res);
-    TrainsDAO.searchBy({ user_id: req.session.currentUser.id }).then(trains) => {
+  static getAllOfCurrentUser(req, res) {
+    TrainsDAO.searchBy({ user_id: req.session.currentUser.id })
+    .then((trains) => {
       res.status(200).json(trains);
     });
 }
 
 static create(req, res) {
   const trainData = {
-    type: req.body,
-    console.log(req.body),
-    name: req.,
-    overall: req.,
-    delay: req.,
-    crowded: req.,
-    smelly: req.,
+    type: req.body.type,
+    name: req.body.name,
+    overall: req.body.overall,
+    delay: req.body.delay,
+    crowded: req.body.crowded,
+    smelly: req.body.smelly,
+    reviewDate: req.body.review_date,
   };
   TrainsDAO.create(trainsData)
          .then((trains) => res.status(200).json(trains));

@@ -3,8 +3,7 @@ DROP TABLE IF EXISTS transportation;
 
 CREATE TABLE users (
   u_id SERIAL PRIMARY KEY,
-  first_name VARCHAR(255),
-  last_name VARCHAR(255),
+  name VARCHAR(255),
   email VARCHAR(255),
   password VARCHAR(10)
 );

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 
 class MyCommute extends Component {
-  consstuctor() {
+  constructor() {
     super();
   }
-}
 
   render() {
     return (
@@ -13,5 +12,6 @@ class MyCommute extends Component {
       </div>
     );
   }
+}
 
 export default MyCommute;

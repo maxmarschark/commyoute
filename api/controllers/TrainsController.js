@@ -6,6 +6,11 @@ class TrainsController {
       res.status(200).json(train);
     });
   }
+  static getCrowdedAvg(req, res) {
+    TransDAO.getCrowdedAvg(req.body.crowded).then((train) => {
+      res.status(200).json(train);
+    });
+  }
 }
 
   // static create(req, res) {

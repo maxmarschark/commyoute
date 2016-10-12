@@ -8,14 +8,12 @@ function sql(file) {
 
 const sqlProvider = {
   users: {
-    all: sql('./user/all.sql'),
     create: sql('./user/create.sql'),
-    delete: sql('./user/delete.sql'),
     findUser: sql('./user/find.sql'),
+    changeName: sql('./user/change.sql'),
   },
-
   trans: {
-    all: sql('./trans/all.sql'),
+    infoAvgs: sql('./trans/trainAvgs.sql'),
     create: sql('./trans/create.sql'),
   },
 };

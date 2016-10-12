@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import request from 'superagent';
 
 const Home = () => {
   return (
@@ -28,7 +29,6 @@ const Home = () => {
         <img className="train" src="ztrain.svg" height="50" width="50"></img>
         <img className="train" src="strain.svg" height="50" width="50"></img>
     </div>
-
   );
 };
 

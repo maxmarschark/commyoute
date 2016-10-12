@@ -18,5 +18,5 @@ CREATE TABLE trans (
   crowded VARCHAR(1),
   smelly VARCHAR(1),
   review_date TIMESTAMP NOT NULL DEFAULT NOW(),
-  u_id INTEGER REFERENCES users(u_id)
+  u_id INTEGER FOREIGN KEY REFERENCES users(u_id)
 );

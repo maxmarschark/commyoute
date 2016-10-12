@@ -2,7 +2,10 @@ const db = require('../db');
 const sql = require('../sqlprovider').trans;
 
 class TransDAO {
-  
+  static getTrainInfo(trainName) {
+    const columns = [overall, smelly, delay, crowded]
+    for 
+  }
   // static findUser(keyValue) {
   //   const key = Object.keys(keyValue)[0];
   //   const value = keyValue[key];

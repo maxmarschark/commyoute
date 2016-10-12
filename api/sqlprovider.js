@@ -14,9 +14,9 @@ const sqlProvider = {
   },
   trans: {
     crowdedAvg: sql('./trans/trainInfo/crowdedAvg.sql'),
-    delayAvg: sql('./trans/trainInfo/crowdedAvg.sql'),
-    overallAvg: sql('./trans/trainInfo/crowdedAvg.sql'),
-    smellAvg: sql('./trans/trainInfo/crowdedAvg.sql'),
+    delayAvg: sql('./trans/trainInfo/delayAvg.sql'),
+    overallAvg: sql('./trans/trainInfo/overallAvg.sql'),
+    smellAvg: sql('./trans/trainInfo/smellyAvg.sql'),
     create: sql('./trans/create.sql'),
   },
 };

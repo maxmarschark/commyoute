@@ -1,14 +1,8 @@
 const TransDAO = require('../dao/transDAO');
 
 class TrainsController {
-  static Stuff(req, res) {
-    TransDAO.searchBy({ user_id: req.session.currentUser.id })
-    .then((trains) => {
-      res.status(200).json(trains);
-    });
-  }
   static getTrainInfo(req, res) {
-    TransDAO.getTrainInfo(req.body.name).then((train) => {
+    TransDAO.getTrainInfo(req.params.id).then((train) => {
       res.status(200).json(train);
     });
   }

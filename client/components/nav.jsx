@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-// import Menu from 'react-burger-menu'.nameOfAnimation;
 
 const propTypes = {
   children: React.PropTypes.element.isRequired,

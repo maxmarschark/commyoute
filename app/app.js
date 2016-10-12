@@ -21,9 +21,9 @@ app.use(session({
 
 app.use(morgan('dev'));
 
-app.use('/test', authentication);
-app.use('/test', AuthRouter);
-app.use('/test/users', UserRouter);
-app.use('/test/trains', TrainsRouter);
+app.use('/api', authentication);
+app.use('/api', AuthRouter);
+app.use('/api/users', UserRouter);
+app.use('/api/trains', TrainsRouter);
 
 module.exports = app;

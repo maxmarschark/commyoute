@@ -5,6 +5,8 @@ const morgan = require('morgan');
 const session = require('express-session');
 const authentication = require('../api/middleware/authentication');
 const AuthRouter = require('../api/routes/AuthRouter');
+const UserRouter = require('../api/routes/UserRouter');
+const TrainsRouter = require('../api/routes/TrainsRouter');
 
 const app = express();
 

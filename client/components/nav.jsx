@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+// import Menu from 'react-burger-menu'.nameOfAnimation;
 
 const propTypes = {
   children: React.PropTypes.element.isRequired,
@@ -24,6 +25,7 @@ class Nav extends Component {
       <div>
         <ul className="nav" id="topnav">
           <li><Link className="link" to="/" id="homeButton">Home</Link></li>
+          <li><Link className="link" to="/login" id="loginButton">Login</Link></li>
           <li><Link className="link" to="/register" id="registerButton">Register</Link></li>
           <li className="icon">
             <a href="javascript:void(0);" className="font" onClick={this.showResponsive}>☰</a>

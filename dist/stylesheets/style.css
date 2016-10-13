@@ -47,6 +47,12 @@ a.font {
 ul.nav li.icon {
   display: none;
 }
+/** {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}
+view rawghost.css*/
 
 @media screen and (max-width:680px) {
   ul.nav li:not(:first-child) {display: none;}

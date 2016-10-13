@@ -1,5 +1,6 @@
 const db = require('../db');
 const sql = require('../sqlprovider').users;
+const User = require('../models/user');
 
 class UserDAO {
   static findUser(keyValue) {

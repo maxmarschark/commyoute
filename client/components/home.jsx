@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import request from 'superagent';
+import React from 'react';
 
 const Home = () => {
   return (

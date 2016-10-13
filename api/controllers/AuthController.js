@@ -18,6 +18,7 @@ class AuthController {
            })
            .catch((err) => {
              console.error(err);
+             console.log('this catch is hit')
              res.status(401).end();
            });
   }

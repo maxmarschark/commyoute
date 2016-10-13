@@ -24,7 +24,7 @@ class Login extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    request.get('/api/login')
+    request.post('/api/login')
            .send(this.state)
            .then(() => {
              this.updateAuth();

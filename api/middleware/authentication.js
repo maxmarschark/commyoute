@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 const authentication = (req, res, next) => {
+  console.log("handling auth");
   const { token } = req.cookies;
 
   const allowedRoutes = ['/login', '/signup', '/signout'];

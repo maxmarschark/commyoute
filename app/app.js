@@ -27,6 +27,6 @@ app.use('/api', authentication);
 app.use('/api', AuthRouter);
 app.use('/api/users', UserRouter);
 app.use('/api/trains', TrainsRouter);
-app.use('/MyCommutes', authentication);
+app.use('/mycommutes', authentication);
 
 module.exports = app;

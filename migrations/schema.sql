@@ -17,7 +17,6 @@ CREATE TABLE trans (
   delay INTEGER,
   crowded INTEGER,
   smelly INTEGER,
-  img_url TEXT,
   review_date TIMESTAMP NOT NULL DEFAULT NOW(),
   user_id INTEGER REFERENCES users(id)
 );

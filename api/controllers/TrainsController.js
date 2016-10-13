@@ -7,10 +7,17 @@ class TrainsController {
     });
   }
   static all(req, res) {
-    console.log('anything');
     TransDAO.all().then((trains) => {
       res.status(200).json(trains);
     });
+  }
+  static create(req, res) {
+    console.log('something');
+    const reviewData = {
+      type: req.body.type,
+      name: req.body.name,
+      t
+    }
   }
 }
 

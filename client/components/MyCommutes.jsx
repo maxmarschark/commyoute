@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router';
+import request from 'superagent';
 
 class MyCommute extends Component {
   constructor() {
     super();
   }
-
+  componentWillMount() {
+    request.get('/mycommutes')
+           .catch((response) => {
+             if (response.toString().includes('Forbidden')) {
+               this.props.router.push('/login');
+             }
+           });
+  }
   render() {
     return (
       <div id="MyCommute">
@@ -14,4 +23,4 @@ class MyCommute extends Component {
   }
 }
 
-export default MyCommute;
+export default withRouter(MyCommute);

@@ -31,7 +31,7 @@ class Home extends Component {
               <TrainIcon
               img_url={train.img_url}
               />
-            )
+            );
           })
         }
       </div>

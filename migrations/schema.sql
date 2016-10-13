@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS transportation;
 
 CREATE TABLE users (
-  u_id SERIAL PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   email VARCHAR(255),
   password VARCHAR(255)
@@ -17,6 +17,7 @@ CREATE TABLE trans (
   delay INTEGER,
   crowded INTEGER,
   smelly INTEGER,
+  img_url TEXT,
   review_date TIMESTAMP NOT NULL DEFAULT NOW(),
-  u_id INTEGER REFERENCES users(u_id)
+  user_id INTEGER REFERENCES users(id)
 );

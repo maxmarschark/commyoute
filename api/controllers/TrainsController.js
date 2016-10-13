@@ -6,6 +6,12 @@ class TrainsController {
       res.status(200).json(train);
     });
   }
+  static all(req, res) {
+    console.log('anything');
+    TransDAO.all().then((trains) => {
+      res.status(200).json(trains);
+    });
+  }
 }
 
   // static create(req, res) {

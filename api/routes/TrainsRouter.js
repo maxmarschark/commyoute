@@ -3,6 +3,7 @@ const TrainsController = require('../controllers/TrainsController');
 
 const router = express.Router();
 
+router.get('/', TrainsController.all);
 router.get('/:id', TrainsController.getTrainInfo);
 // router.post('/', TrainsController.createReview);
 // router.get('/:uid', TrainsController.getLastReviewForUser);

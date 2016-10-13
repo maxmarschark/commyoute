@@ -19,7 +19,6 @@ class Register extends Component {
     const updated = {};
     updated[inputName] = input.value;
     this.setState(updated);
-    console.log(this.state);
   }
   submitRegister(e) {
     e.preventDefault();

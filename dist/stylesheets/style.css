@@ -19,12 +19,45 @@ a.font {
   font-size: 0.938em;
 }
 
+.btn {
+  height: 2rem;
+  width: 9rem;
+  box-sizing: padding-box;
+}
+
+.input {
+  font-style: normal;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 30%;
+  display: inline-block;
+  padding-bottom: 1rem;
+  margin: 50%;
+  margin-bottom: 1rem;
+}
+
 .home {
   text-align: center;
+  font-family: 'Righteous', cursive;
+}
+
+.LoginPage {
+  text-align: center;
+  font-family: 'Righteous', cursive;
+}
+
+.RegisterPage {
+  text-align: center;
+  font-family: 'Righteous', cursive;
+}
+
+.MyCommute {
+  text-align: center;
+  font-family: 'Righteous', cursive;
 }
 
 .train {
-  display: block;
+  display: inline;
   padding-left: 10rem;
   padding-top: 2rem;
 }
@@ -37,12 +70,23 @@ a.font {
   text-decoration: none;
   transition: 0.3s;
   font-size: 17px;
+  font-family: 'Righteous', cursive;
 }
 
 .link:hover {
   font-size: 24px;
   border: 3px solid white;
 }
+
+.rating--closed {
+  display: none;
+  font-family: 'Righteous', cursive;
+}
+
+.ovr {
+  margin: 25%;
+}
+
 
 ul.nav li.icon {
   display: none;

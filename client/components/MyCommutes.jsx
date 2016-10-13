@@ -7,8 +7,8 @@ class MyCommute extends Component {
 
   render() {
     return (
-      <div id="MyCommute">
-        <h1>My Commutes</h1>
+      <div id="ElCommute">
+        <h1 className="MyCommute">My Commutes</h1>
       </div>
     );
   }

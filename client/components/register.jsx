@@ -7,12 +7,12 @@ class Register extends Component {
   render() {
     return (
       <div id="registerBody">
-        <h1>Register page</h1>
+        <h1 className="RegisterPage">Register page</h1>
         <div>
-          <input name="username" onChange={this.handleChange} type="text" placeholder="username" />
+          <input className="input" name="username" onChange={this.handleChange} type="text" placeholder="username" />
         </div>
         <div>
-          <input name="password" onChange={this.handleChange} type="password" placeholder="password" />
+          <input className="input" name="password" onChange={this.handleChange} type="password" placeholder="password" />
         </div>
         <button className="btn" onClick={this.handleSubmit}>Register</button>
       </div>

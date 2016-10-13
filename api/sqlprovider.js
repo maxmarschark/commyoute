@@ -15,6 +15,7 @@ const sqlProvider = {
   trans: {
     infoAvgs: sql('./trans/trainAvgs.sql'),
     create: sql('./trans/create.sql'),
+    all: sql('./trans/all.sql'),
   },
 };
 

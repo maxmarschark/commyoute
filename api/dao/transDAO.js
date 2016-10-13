@@ -1,6 +1,6 @@
 const db = require('../db');
 const sql = require('../sqlprovider').trans;
-const Train = require('../models/trainModel');
+const Train = require('../models/train');
 
 class TransDAO {
   static getTrainInfo(id) {
@@ -8,6 +8,9 @@ class TransDAO {
       new Train({ name: id, ovrAvg: avgs.overall, smellAvg: avgs.smelly, crowdAvg: avgs.crowded, delayAvg: avgs.delay })
     );
   }
+  static all() {
+    return db.map(sql.all, [], (row) => new Train(row));
+  };
 }
 
 module.exports = TransDAO;

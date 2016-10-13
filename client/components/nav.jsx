@@ -8,27 +8,25 @@ const propTypes = {
 class Nav extends Component {
   constructor() {
     super();
-    this.showResponsive = this.showResponsive.bind(this);
   }
 
-  showResponsive() {
-    let nav = document.getElementById("topnav");
-    if (nav.className === "nav") {
-        nav.className += "responsive";
-    } else {
-        nav.className = "nav";
+  toggleClass() {
+    let nav = document.querySelectorAll('.nav-item');
+    let hamburger = document.querySelector('.hamburger');
+    for (let navItem of nav) {
+      navItem.className === 'nav-item nav-item--closed' ? navItem.setAttribute('class', 'nav-item nav-item--open') : navItem.setAttribute('class', 'nav-item nav-item--closed');
     }
+    hamburger.innerText == '☰' ? hamburger.innerText='x' : hamburger.innerText='☰';
   }
+
   render() {
     return (
       <div>
-        <ul className="nav" id="topnav">
-          <li><Link className="link" to="/" id="homeButton">Home</Link></li>
-          <li><Link className="link" to="/register" id="registerButton">Register</Link></li>
-          <li className="icon">
-            <a href="javascript:void(0);" className="font" onClick={this.showResponsive}>☰</a>
-          </li>
-        </ul>
+        <div className="top-nav" id="topnav">
+          <p className="hamburger" onClick={this.toggleClass}>☰</p>
+          <p><Link className="nav-item nav-item--closed" to="/" id="homeButton">Home</Link></p>
+          <p><Link className="nav-item nav-item--closed" to="/register" id="registerButton">Register</Link></p>
+        </div>
         <div id="body">
           {this.props.children}
         </div>

@@ -1,5 +1,6 @@
 body {
   background-color: rgb(106, 114, 115);
+  font-family: 'Righteous', cursive;
   margin: 0;
 }
 
@@ -32,28 +33,33 @@ a.font {
   width: 30%;
   display: inline-block;
   padding-bottom: 1rem;
-  margin: 50%;
   margin-bottom: 1rem;
 }
 
 .home {
   text-align: center;
-  font-family: 'Righteous', cursive;
 }
 
 .LoginPage {
   text-align: center;
-  font-family: 'Righteous', cursive;
 }
 
 .RegisterPage {
   text-align: center;
-  font-family: 'Righteous', cursive;
 }
 
 .MyCommute {
   text-align: center;
-  font-family: 'Righteous', cursive;
+}
+
+.MyTrain {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+
+.grades {
+  text-align: center;
 }
 
 .train {
@@ -70,7 +76,6 @@ a.font {
   text-decoration: none;
   transition: 0.3s;
   font-size: 17px;
-  font-family: 'Righteous', cursive;
 }
 
 .link:hover {
@@ -80,7 +85,6 @@ a.font {
 
 .rating--closed {
   display: none;
-  font-family: 'Righteous', cursive;
 }
 
 .ovr {

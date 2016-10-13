@@ -40,24 +40,24 @@ class Home extends Component {
 
           <div id="one" onClick={this.toggleOneClass}>
             <img className="train" src="1train.svg" height="50" width="50"></img>
-            <span className="ovr">overall</span>
-            <p className="rating rating--closed">delay</p>
-            <p className="rating rating--closed">crowded</p>
-            <p className="rating rating--closed">smelly</p>
+              <span className="ovr">overall</span>
+                <p className="rating rating--closed">delay</p>
+                <p className="rating rating--closed">crowded</p>
+                <p className="rating rating--closed">smelly</p>
           </div>
           <div id="two">
             <img className="train" src="2train.svg" height="50" width="50"></img>
-            <span className="ovr">overall</span>
-            <p className="rating rating--closed">delay</p>
-            <p className="rating rating--closed">crowded</p>
-            <p className="rating rating--closed">smelly</p>
+              <span className="ovr">overall</span>
+                <p className="rating rating--closed">delay</p>
+                <p className="rating rating--closed">crowded</p>
+                <p className="rating rating--closed">smelly</p>
           </div>
           <div id="three">
             <img className="train" src="3train.svg" height="50" width="50"></img>
-            <span className="ovr">overall</span>
-            <p className="rating rating--closed">delay</p>
-            <p className="rating rating--closed">crowded</p>
-            <p className="rating rating--closed">smelly</p>
+              <span className="ovr">overall</span>
+                <p className="rating rating--closed">delay</p>
+                <p className="rating rating--closed">crowded</p>
+                <p className="rating rating--closed">smelly</p>
           </div>
           <div>
             <img className="train" src="4train.svg" height="50" width="50"></img>

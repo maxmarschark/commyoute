@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router';
+import { Link, withRouter } from 'react-router';
 import request from 'superagent';
 
 class MyCommute extends Component {
@@ -18,6 +18,7 @@ class MyCommute extends Component {
     return (
       <div id="MyCommute">
         <h1>My Commutes</h1>
+        <Link to="/TrainReview" id="TrainReviewButton">Train Review</Link>
       </div>
     );
   }

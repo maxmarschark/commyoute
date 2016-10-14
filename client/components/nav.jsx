@@ -27,6 +27,7 @@ class Nav extends Component {
           <li><Link className="link" to="/login" id="loginButton">Login</Link></li>
           <li><Link className="link" to="/register" id="registerButton">Register</Link></li>
           <li><Link className="link" to="/mycommutes" id="MyCommutesButton">My CommYOUte</Link></li>
+          <li><Link className="link" to="/TrainReview" id="TrainReviewButton">Train Review</Link></li>
           <li className="icon">
             <a href="javascript:void(0);" className="font" onClick={this.showResponsive}>☰</a>
           </li>

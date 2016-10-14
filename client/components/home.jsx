@@ -16,7 +16,7 @@ class Home extends Component {
 
   componentDidMount() {
       this.getOverall();
-      if(cookie.load9('token')) {
+      if(cookie.load('token')) {
         this.getTrainOverall();
       }
   }

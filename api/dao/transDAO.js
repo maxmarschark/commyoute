@@ -11,6 +11,11 @@ class TransDAO {
   static all() {
     return db.map(sql.all, [], (row) => new Train(row));
   };
+
+  static create({ Type, Name, Overall, Delay, Crowded, Smelly, u_id }) {
+   return db.one(sql.create, [Type, Name, Overall, Delay, Crowded, Smelly, u_id]).then((row) => new User(row));
+  }
+
 }
 
 module.exports = TransDAO;

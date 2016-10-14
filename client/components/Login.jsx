@@ -20,15 +20,15 @@ class Login extends Component {
     const updated = {};
     updated[inputName] = input.value;
     this.setState(updated);
-    console.log(this.state);
   }
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
     request.post('/api/login')
            .send(this.state)
-           .then(() => {
+           .then((user) => {
              this.updateAuth();
+             let cleanUser = JSON.parse(user.text);
+             console.log(cleanUser.id);
            });
   }
   updateAuth() {

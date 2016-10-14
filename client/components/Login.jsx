@@ -28,6 +28,7 @@ class Login extends Component {
            .then((user) => {
              this.updateAuth();
              let cleanUser = JSON.parse(user.text);
+             console.log(cleanUser);
              console.log(cleanUser.id);
            });
   }

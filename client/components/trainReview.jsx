@@ -31,11 +31,11 @@ class TrainReview extends Component {
   render() {
     return (
       <div>
-        <input name="Train" type="text" onChange={this.handleChange}
-        placeholder="What train were you on?" />
-        <input name="Delay" type="text" onChange={this.handleChange} placeholder="rate delay 1-5" />
-        <input name="Crowded" type="text" onChange={this.handleChange} placeholder="rate Crowded 1-5" />
-        <input name="Smelly" type="text" onChange={this.handleChange} placeholder="rate smelly 1-5" />
+        <input name="Train" className="Input" type="text" onChange={this.handleChange}
+        placeholder="Tell me....What train was yo ass ridin??" />
+        <input name="Delay" className="Input" type="text" onChange={this.handleChange} placeholder="How delayed was yo ride? scale of 1-5" />
+        <input name="Crowded" className="Input" type="text" onChange={this.handleChange} placeholder="How crowded was yo ride? scale of 1-5" />
+        <input name="Smelly" className="Input" type="text" onChange={this.handleChange} placeholder="How stanky was yo ride? scale of 1-5" />
       </div>
     );
   }

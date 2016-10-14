@@ -8,19 +8,6 @@ import Register from '../components/Register.jsx';
 import MyCommutes from '../components/MyCommutes.jsx';
 import TrainReview from '../components/trainReview.jsx';
 
-// function requireAuth(nextState, replace) {
-//   request.get('/mycommutes')
-//          .catch((response) => {
-//            if (response.toString().includes('Forbidden')) {
-//              console.log('response :' + response.toString());
-//              replace({
-//                pathname: '/login',
-//                state: { nextPathname: nextState.location.pathname },
-//              });
-//            }
-//          });
-// }
-
 const Routes = () => {
   return (
     <Router history={browserHistory}>

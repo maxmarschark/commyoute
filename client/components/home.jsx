@@ -13,6 +13,25 @@ class Home extends Component {
       return <TrainIcon trainName={train} url={this.trainURLs[idx]} />
     });
   }
+
+  componentDidMount() {
+      this.getOverall();
+      if(cookie.load('token')) {
+        this.getTrainOverall();
+      }
+  }
+
+  getTrainOverall() {
+    request.get('api/trains/${this.state.name}')
+           .then((response) => {
+             const ovr = response.body;
+             this.setState({ ovr });
+           })
+           .catch(() => {
+             this.getOverall();
+           });
+  }
+
   render() {
     return (
       <div id="homeBody">

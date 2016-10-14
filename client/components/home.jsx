@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import request from 'superagent';
 import TrainIcon from './TrainIcon.jsx';
-import React from 'react';
 
 class Home extends Component {
   constructor() {

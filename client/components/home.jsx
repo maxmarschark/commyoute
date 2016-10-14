@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import request from 'superagent';
 import TrainIcon from './TrainIcon.jsx';
-import React from 'react';
 
 class Home extends Component {
   constructor() {
@@ -11,7 +9,7 @@ class Home extends Component {
   }
   buildLinks() {
     return this.trains.map((train, idx) => {
-      return <TrainIcon trainName={train} url={this.trainURLs[idx]} />
+      return <TrainIcon key={idx} trainName={train} url={this.trainURLs[idx]} />
     });
   }
   render() {

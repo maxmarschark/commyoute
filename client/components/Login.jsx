@@ -12,23 +12,20 @@ class Login extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-
   handleChange(e) {
     const input = e.target;
     const inputName = input.getAttribute('name');
     const updated = {};
     updated[inputName] = input.value;
     this.setState(updated);
-    console.log(this.state);
   }
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
     request.post('/api/login')
            .send(this.state)
-           .then(() => {
+           .then((user) => {
              this.updateAuth();
+            //  console.log(user.id);
            });
   }
   updateAuth() {

@@ -5,10 +5,8 @@ const bcrypt = require('bcrypt');
 class AuthController {
   static login(req, res) {
     const { email, password } = req.body;
-    console.log(email);
     UserDAO.findUser({ email })
            .then((user) => {
-             console.log('reached then');
              if (!bcrypt.compareSync(password, user.password)) {
                res.status(401).end();
              } else {
@@ -19,7 +17,7 @@ class AuthController {
              }
            })
            .catch((err) => {
-             console.error(`Error: ${err}`);
+             console.error(`THIS IS THE ERROR: ${err}`);
              res.status(401).end();
            });
   }

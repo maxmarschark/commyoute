@@ -16,8 +16,6 @@ class TrainReview extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-
-
   handleChange(e) {
     const input = e.target;
     console.log(input)
@@ -36,6 +34,8 @@ class TrainReview extends Component {
         <input name="Delay" className="Input" type="text" onChange={this.handleChange} placeholder="How delayed was yo ride? scale of 1-5" />
         <input name="Crowded" className="Input" type="text" onChange={this.handleChange} placeholder="How crowded was yo ride? scale of 1-5" />
         <input name="Smelly" className="Input" type="text" onChange={this.handleChange} placeholder="How stanky was yo ride? scale of 1-5" />
+        <button className="SubmitReviewBtn" onClick={this.handleSubmit}>Submit Review</button>
+
       </div>
     );
   }

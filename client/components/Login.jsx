@@ -20,11 +20,12 @@ class Login extends Component {
     const updated = {};
     updated[inputName] = input.value;
     this.setState(updated);
+    console.log(this.state);
   }
-
   handleSubmit(e) {
     e.preventDefault();
-    request.get('/api/login')
+    console.log(this.state);
+    request.post('/api/login')
            .send(this.state)
            .then((user) => {
              this.updateAuth();
@@ -36,13 +37,12 @@ class Login extends Component {
       token: cookie.load('token'),
     });
   }
-
   render() {
     return (
       <div id="loginBody">
         <h1>Login page</h1>
           <div id="login-form">
-            <input name="username" onChange={this.handleChange} type="text" placeholder="username" />
+            <input name="email" onChange={this.handleChange} type="text" placeholder="username" />
           </div>
           <div>
             <input name="password" onChange={this.handleChange} type="password" placeholder="password" />

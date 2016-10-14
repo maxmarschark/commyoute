@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import request from 'superagent';
 import cookie from 'react-cookie';
+import { withRouter } from 'react-router';
 
 class Register extends Component {
   constructor() {
@@ -26,6 +27,7 @@ class Register extends Component {
            .send(this.state)
            .then(() => {
              this.updateAuth();
+             this.props.router.push('/mycommutes');
            });
   }
   updateAuth() {
@@ -52,4 +54,4 @@ class Register extends Component {
   }
 }
 
-export default Register;
+export default withRouter(Register);

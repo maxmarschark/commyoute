@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import request from 'superagent';
 import cookie from 'react-cookie';
+import { withRouter } from 'react-router';
 
 class Login extends Component {
   constructor() {
@@ -29,6 +30,7 @@ class Login extends Component {
              this.updateAuth();
              let cleanUser = JSON.parse(user.text);
              console.log(cleanUser.id);
+             this.props.router.push('/mycommutes');
            });
   }
   updateAuth() {
@@ -52,4 +54,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);

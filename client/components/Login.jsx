@@ -26,8 +26,9 @@ class Login extends Component {
     e.preventDefault();
     request.get('/api/login')
            .send(this.state)
-           .then(() => {
+           .then((user) => {
              this.updateAuth();
+             console.log(user.id);
            });
   }
   updateAuth() {

@@ -17,17 +17,6 @@ class TrainReview extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  const trainData = {
-      type: req.body.type,
-      name: req.body.Train,
-      overall: req.body.overall,
-      delay: req.body.delay,
-      crowded: req.body.crowded,
-      smelly: req.body.smelly,
-      reviewDate: req.body.review_date,
-
-
-
   handleChange(e) {
     const input = e.target;
     console.log(input)
@@ -38,7 +27,7 @@ class TrainReview extends Component {
     this.setState(updated);
   }
 
-  submitReview(e) {
+  handleSubmit(e) {
     e.preventDefault();
     request.post('/api/reviews')
             .send(this.state)
@@ -55,7 +44,7 @@ class TrainReview extends Component {
         <input name="Delay" className="Input" type="text" onChange={this.handleChange} placeholder="How delayed was yo ride? scale of 1-5" />
         <input name="Crowded" className="Input" type="text" onChange={this.handleChange} placeholder="How crowded was yo ride? scale of 1-5" />
         <input name="Smelly" className="Input" type="text" onChange={this.handleChange} placeholder="How stanky was yo ride? scale of 1-5" />
-        <button className="btn" onClick={this.submitReview}>Register</button>
+        <button className="SubmitReviewBtn" onClick={this.handleSubmit}>Submit Review</button>
       </div>
     );
   }

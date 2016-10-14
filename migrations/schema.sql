@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS transportation;
+DROP TABLE IF EXISTS trans;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -21,3 +21,5 @@ CREATE TABLE trans (
   review_date TIMESTAMP NOT NULL DEFAULT NOW(),
   user_id INTEGER REFERENCES users(id)
 );
+
+-- SELECT * FROM trans WHERE user_id=(users(id));

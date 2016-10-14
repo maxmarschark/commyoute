@@ -7,8 +7,8 @@ class Login extends Component {
     super();
     this.state = {
       email: '',
-      password: ''
-    }
+      password: '',
+    };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -23,9 +23,8 @@ class Login extends Component {
     e.preventDefault();
     request.post('/api/login')
            .send(this.state)
-           .then((user) => {
+           .then(() => {
              this.updateAuth();
-            //  console.log(user.id);
            });
   }
   updateAuth() {
@@ -37,13 +36,13 @@ class Login extends Component {
     return (
       <div id="loginBody">
         <h1>Login page</h1>
-          <div id="login-form">
-            <input name="email" onChange={this.handleChange} type="text" placeholder="username" />
-          </div>
-          <div>
-            <input name="password" onChange={this.handleChange} type="password" placeholder="password" />
-          </div>
-          <button className="btn" onClick={this.handleSubmit}>Login</button>
+        <div id="login-form">
+          <input name="email" onChange={this.handleChange} type="text" placeholder="username" />
+        </div>
+        <div>
+          <input name="password" onChange={this.handleChange} type="password" placeholder="password" />
+        </div>
+        <button className="btn" onClick={this.handleSubmit}>Login</button>
       </div>
     );
   }

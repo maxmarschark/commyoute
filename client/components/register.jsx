@@ -23,6 +23,7 @@ class Register extends Component {
   }
   submitRegister(e) {
     e.preventDefault();
+    console.log(this.state);
     request.post('/api/signup')
            .send(this.state)
            .then(() => {

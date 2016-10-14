@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', TrainsController.all);
 router.get('/:id', TrainsController.getTrainInfo);
-// router.post('/', TrainsController.createReview);
+router.post('/reviews', TrainsController.create);
 // router.get('/:uid', TrainsController.getLastReviewForUser);
 // router.delete('/:uid', TrainsController.delete);
 // router.patch('/:uid', TrainsController.changeLastReviewForUser);

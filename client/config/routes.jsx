@@ -6,6 +6,7 @@ import Home from '../components/Home.jsx';
 import Login from '../components/Login.jsx';
 import Register from '../components/Register.jsx';
 import MyCommutes from '../components/MyCommutes.jsx';
+import TrainReview from '../components/trainReview.jsx';
 
 // function requireAuth(nextState, replace) {
 //   request.get('/mycommutes')
@@ -28,6 +29,7 @@ const Routes = () => {
         <Route path="login" component={Login} />
         <Route path="register" component={Register} />
         <Route path="mycommutes" component={MyCommutes} />
+        <Route path="TrainReview" component={TrainReview} />
       </Route>
     </Router>
   );

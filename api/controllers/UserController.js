@@ -1,4 +1,4 @@
-const UserDAO = require('../dao/UserDAO');
+const UserDAO = require('../dao/userDAO');
 
 class UserController {
   static getOne(req, res) {

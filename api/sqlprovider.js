@@ -9,7 +9,7 @@ function sql(file) {
 const sqlProvider = {
   users: {
     create: sql('./user/create.sql'),
-    findUser: sql('./user/find.sql'),
+    find: sql('./user/find.sql'),
     changeName: sql('./user/change.sql'),
   },
   trans: {

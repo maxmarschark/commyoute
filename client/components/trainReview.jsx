@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import request from 'superagent';
+import Login from './Login.jsx';
+
+const propTypes = {
+  cleanUser: React.propTypes.func,
+};
 
 class TrainReview extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       Train: '',
       UserId: 0,

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import request from 'superagent';
-import Nav from '../components/Nav.jsx';
-import Home from '../components/Home.jsx';
+import Nav from '../components/nav.jsx';
+import Home from '../components/home.jsx';
 import Login from '../components/Login.jsx';
-import Register from '../components/Register.jsx';
+import Register from '../components/register.jsx';
 import MyCommutes from '../components/MyCommutes.jsx';
 import TrainReview from '../components/trainReview.jsx';
 

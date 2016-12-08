@@ -15,7 +15,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
-      this.getOverall();
+      this.getTrainOverall();
       if(cookie.load('token')) {
         this.getTrainOverall();
       }
@@ -28,7 +28,7 @@ class Home extends Component {
              this.setState({ ovr });
            })
            .catch(() => {
-             this.getOverall();
+             this.geTraintOverall();
            });
   }
 
